@@ -4,32 +4,32 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font: 1rem Arial, sans-serif;
-  padding: 1.25rem;
+  padding: 0;
 }
-
+/* Header Styles */
 .header {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 12px;
   padding: 0.625rem 1.25rem;
   margin: 10px auto;
-  background: linear-gradient(to right, #6dd5ed, #2193b0); /* Gradient background */
+  background: linear-gradient(to right, #6dd5ed, #2193b0); 
   text-align: center;
   width: auto;
   display: block;
 }
-
+/* Footer Styles */
 .footer {
   border: 1px solid black;
   border-radius: 12px;
   padding: 0.625rem 1.25rem;
   margin: 10px;
-  background: linear-gradient(to right, #6dd5ed, #2193b0); /* Gradient background */
+  background: linear-gradient(to right, #6dd5ed, #2193b0); 
 }
 
 .header, .footer {
   width: 100%;
 }
-
+/* Heading Styles */
 h1, h2, h3 {
   color: rgba(0, 0, 0, 0.596);
   font-variant: small-caps;
@@ -44,12 +44,12 @@ footer p {
   color: rgb(5, 5, 5);
   text-align: center;
 }
-
+/* Main Section Styles */
 main {
   padding: 15px;
   flex: 3;
 }
-
+/* Aside Section Styles */
 aside {
   padding: 15px;
   flex: 1;
@@ -86,7 +86,7 @@ ul a {
   flex-wrap: nowrap;
   gap: 50px;
 }
-
+/* Navigation Styles */
 nav {
   width: 100%;
 }
@@ -95,7 +95,6 @@ aside a:hover {
   color: rgb(19, 175, 71);
 }
 
-/* Two-tier navigation menu styles */
 nav ul.main-menu {
   list-style-type: none;
   margin: 0;
@@ -120,13 +119,12 @@ nav ul.main-menu > li > a {
   color: black;
 }
 
-/* Sub-menu styles */
 nav ul.sub-menu {
   list-style-type: none;
   position: absolute;
   display: none;
   padding: 0;
-  margin-top: 0; /* Adjusted to remove gap */
+  margin-top: 0; 
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   background-color: white;
@@ -139,43 +137,38 @@ nav ul.sub-menu > li > a {
   color: black;
 }
 
-/* Show sub-menu on hover */
 nav ul.main-menu > li:hover > ul.sub-menu {
   display: block;
 }
 
-/* Enhancing hover effects for main menu items */
 nav ul.main-menu > li > a:hover {
   background-color: #9dd6ec;
   color: white;
 }
 
-/* Improving hover effect for sub-menu */
 nav ul.sub-menu > li > a:hover {
   background-color: #d1e0e5;
   color: black;
 }
 
-/* Smooth transition for hover effects */
 nav a {
   transition: background-color 0.3s, color 0.3s;
 }
 
 .aside-background {
-  background-image: url('../images/image3.jpg'); /* Update the path as needed */
+  background-image: url('../images/image3.jpg'); 
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Ensure the aside has a minimum height so the background is visible */
-    min-height: 300px; /* Adjust as needed */
+    min-height: 300px; 
 }
 
 .bio-image {
-  float: left; /* Aligns the image to the left */
-  margin-right: 20px; /* Adds space between the image and the text */
-  width: 220px; /* Adjust as necessary */
+  float: left; 
+  margin-right: 20px; 
+  width: 220px; 
   height: auto;
-  border-radius: 10px; /* Optional, for rounded corners */
+  border-radius: 10px; 
 }
 
 table {
@@ -200,31 +193,30 @@ section {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* Adjust the gap between images as needed */
+  gap: 10px; 
 }
 
 .gallery figure {
-  margin: 0; /* Remove any default margins */
-  padding: 0px; /* Add this */
-  position: center; /* Add this */
+  margin: 0; 
+  padding: 0px; 
+  position: center; 
 }
 
-/* Style for the images within the figure */
+
 .gallery img {
   width: 200px;
-  height: 200px; /* Maintain aspect ratio */
+  height: 200px; 
   border-radius: 7px;
 }
 
 .gallery figcaption {
   font-size: 14px;
-  /* Remove absolute positioning and let the caption flow in document order */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for legibility */
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 5px;
 }
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%; 
   padding-top: 25px;
   height: 0;
 }
@@ -236,8 +228,7 @@ section {
   width: 90%;
   height: 90%;
 }
-
-/* General form styling */
+/*form styles*/
 form {
   max-width: 600px;
   margin: 20px auto;
@@ -245,7 +236,7 @@ form {
   border: 1px solid #ddd;
   border-radius: 8px;
 }
-
+/* Label Styles inside the Form */
 form label {
   display: block;
   margin-top: 10px;
@@ -262,7 +253,6 @@ form button {
   border-radius: 4px;
 }
 
-/* Specific input types could have different border colors */
 form input[type="date"] {
   border-color: #6dd5ed;
 }
@@ -279,61 +269,58 @@ form button {
   cursor: pointer;
   margin-top: 20px;
 }
-
+/* Hover Effect for Buttons */
 form button:hover {
   background-color: #57c1d4;
 }
-
-/* Responsive adjustments */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   form {
     width: 90%;
     padding: 15px;
   }
 }
-
-/* Large screens (over 1200px) */
+/* Responsive Design for Larger Screens */
 @media (min-width: 1201px) {
   html {
-    font-size: 110%; /* 17.6px */
+    font-size: 110%; 
   }
 
   .header, .footer {
-    padding: 3rem; /* 48px */
+    padding: 3rem; 
   }
 
-  /* Specify a different background image for the aside */
   .aside-background {
     background-image: url('../images/image3.jpg');
   }
 }
-/* Small screens (under 768px) */
+/* Styles for Very Small Screens */
 @media (max-width: 768px) {
   html {
-    font-size: 90%; /* 14.4px */
+    font-size: 90%; 
   }
 
   body {
-    font-size: 0.875rem; /* 14px */
+    font-size: 0.875rem; 
   }
 
   .header h1 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem; 
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .footer, .header {
-    padding: 1rem; /* 16px */
+    padding: 1rem; 
   }
 
-  /* Specify a different background image for the aside */
   .aside-background {
     background-image: url('../images/flag.jpeg');
   }
+  /* Base HTML Styles */
 }
 html {
-  font-size: 16px; /* This sets the default font size for the document */
+  font-size: 16px; 
 }

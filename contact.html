@@ -10,9 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <style>
-        /* CSS styles here will apply to the entire document */
         .gradient-bg {
-            background: linear-gradient(to right, #6dd5ed, #2193b0); /* Example gradient */
+            background: linear-gradient(to right, #6dedcd, #28768a);
         }
     </style>
 </head>
@@ -26,33 +25,36 @@
             <li><a href="index.html">Home</a></li>
             <li>
                 <a href="media.html">Media</a>
-                <!-- Submenu for Media -->
                 <ul class="sub-menu">
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="media.html">Videos</a></li>
-                    <!-- Add more submenu items if needed -->
+                    <li><a href="media.html">Videos</a></li>                    
                 </ul>
             </li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    
+    <!-- Main container for the contact form -->
     <section class="container">
     <main>
+        <!-- Contact section with a form for user input -->
       <h2>Contact</h2>
       <form id="contact-form">
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" required>
 
+        <!-- Input field for email -->
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
+        <!-- Input field for date of birth -->
         <label for="date">Date of Birth:</label>
         <input type="date" id="date" name="date" required>
 
+        <!-- Input field for favorite color -->
         <label for="color">Favorite Color:</label>
         <input type="color" id="color" name="color">
 
+        <!-- Dropdown menu for type of inquiry -->
         <label for="inquiry">Type of Inquiry:</label>
         <select id="inquiry" name="inquiry" required>
             <option value="">Please choose one</option>
@@ -61,9 +63,11 @@
             <option value="collaboration">Collab with us</option>
         </select>
 
+        <!-- Textarea for user message -->
         <label for="message">Your Message:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
 
+        <!-- Submit button for the form -->
         <button type="submit">Submit</button>
     </form>
     </main>
