@@ -12,7 +12,7 @@
     <style>
         /* CSS styles here will apply to the entire document */
         .gradient-bg {
-            background: linear-gradient(to right, #6dedcd, #28768a); /* Example gradient */
+            background: linear-gradient(to right, #6dd5ed, #2193b0); /* Example gradient */
         }
     </style>
 </head>
@@ -39,38 +39,33 @@
     
     <section class="container">
     <main>
-        <section>
-            <h2> Biography </h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Zonaro_GatesofConst.jpg/220px-Zonaro_GatesofConst.jpg" alt="Biography of Mehmed the second. Stating where he was born and for how long did he rule the emperor" class="bio-image">
-            <p><b>Mehmed II</b> (Ottoman Turkish: محمد ثانى, romanized: Meḥmed-i s̱ānī; Turkish: II. Mehmed, pronounced [icinˈdʒi ˈmehmed]; 30 March 1432 – 3 May 1481), commonly known as <strong>Mehmed the Conqueror</strong> (Ottoman Turkish: ابو الفتح, romanized: Ebū'l-fetḥ, lit. 'the Father of Conquest'; Turkish: Fâtih Sultan Mehmed), was twice the sultan of the Ottoman Empire from August 1444 to September 1446 and then later from February 1451 to May 1481.</p>
-        </section>
-     
-        <section>
-            <h2>Quotes</h2>
-            <q cite="https://www.azquotes.com/quote/1264937">Should any man tell you that a mountain had changed its place, you are at liberty to doubt it if you think fit; but if any one tells you that a man has changed his character, do not believe it.</q>
-        </section>
-        
-        <section>
-            <h3> Key Facts</h3>
-            <table>
-                    <tr>
-                        <td>Birth Year</td>
-                        <td>1432</td>
-                    </tr>
-                    <tr>
-                        <td>Reign</td>
-                        <td>1444-1446 and 1451-1481</td>
-                    </tr>
-                    <tr>
-                        <td>Unification</td>
-                        <td>Successfully conquered Constantinople</td>
-                    </tr>
-                    <tr>
-                        <td>Legacy</td>
-                        <td>captured Constantinople and conquered the territories in Anatolia and the Balkans that constituted the Ottoman Empire's heartland for the next four centuries.</td>
-                    </tr>
-            </table>
-        </section>
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date of Birth:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+
+        <label for="inquiry">Type of Inquiry:</label>
+        <select id="inquiry" name="inquiry" required>
+            <option value="">Please choose one</option>
+            <option value="general">General Inquiry</option>
+            <option value="support">Feedback</option>
+            <option value="collaboration">Collab with us</option>
+        </select>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
     </main>
     <aside class="aside-background">
         <h2>

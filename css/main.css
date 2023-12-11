@@ -1,88 +1,339 @@
 /*Ayman Abulqasim 8907941*/
 body {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    font: 16px Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  .header {
-    border: 2px solid rgb(85, 2, 2);
-    border-radius: 12px;
-    padding: 15px;
-    margin: 10px;
-  }
-
-.footer{
-    border: 2px solid black;
-    border-radius: 12px;
-    padding: 15px;
-    margin: 10px;
-    bottom: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font: 1rem Arial, sans-serif;
+  padding: 1.25rem;
 }
-  
-  h1, h2 {
-    color: rgba(33, 177, 105, 0.596);
-    font-variant: small-caps;
-  }
-  
-  footer p {
-    font-size: 14px;
-    color: rgb(5, 5, 5);
-  }
-  
-  main {
-    float: left;
-    width: 66.6%;
+
+.header {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 12px;
+  padding: 0.625rem 1.25rem;
+  margin: 10px auto;
+  background: linear-gradient(to right, #6dd5ed, #2193b0); /* Gradient background */
+  text-align: center;
+  width: auto;
+  display: block;
+}
+
+.footer {
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 0.625rem 1.25rem;
+  margin: 10px;
+  background: linear-gradient(to right, #6dd5ed, #2193b0); /* Gradient background */
+}
+
+.header, .footer {
+  width: 100%;
+}
+
+h1, h2, h3 {
+  color: rgba(0, 0, 0, 0.596);
+  font-variant: small-caps;
+}
+
+h3 {
+  margin-top: 3.75rem;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: rgb(5, 5, 5);
+  text-align: center;
+}
+
+main {
+  padding: 15px;
+  flex: 3;
+}
+
+aside {
+  padding: 15px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.mainimg {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+figcaption {
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+q {
+  font-family: cursive;
+  font-style: italic;
+  font-size: 18px;
+}
+
+ul li {
+  list-style: none;
+  line-height: 1.5;
+}
+
+ul a {
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+}
+
+nav {
+  width: 100%;
+}
+
+aside a:hover {
+  color: rgb(19, 175, 71);
+}
+
+/* Two-tier navigation menu styles */
+nav ul.main-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+
+nav ul.main-menu > li {
+  position: relative;
+  margin-right: 20px;
+}
+
+nav ul.main-menu > li:last-child {
+  margin-right: 0;
+}
+
+nav ul.main-menu > li > a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* Sub-menu styles */
+nav ul.sub-menu {
+  list-style-type: none;
+  position: absolute;
+  display: none;
+  padding: 0;
+  margin-top: 0; /* Adjusted to remove gap */
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+nav ul.sub-menu > li > a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* Show sub-menu on hover */
+nav ul.main-menu > li:hover > ul.sub-menu {
+  display: block;
+}
+
+/* Enhancing hover effects for main menu items */
+nav ul.main-menu > li > a:hover {
+  background-color: #9dd6ec;
+  color: white;
+}
+
+/* Improving hover effect for sub-menu */
+nav ul.sub-menu > li > a:hover {
+  background-color: #d1e0e5;
+  color: black;
+}
+
+/* Smooth transition for hover effects */
+nav a {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.aside-background {
+  background-image: url('../images/image3.jpg'); /* Update the path as needed */
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Ensure the aside has a minimum height so the background is visible */
+    min-height: 300px; /* Adjust as needed */
+}
+
+.bio-image {
+  float: left; /* Aligns the image to the left */
+  margin-right: 20px; /* Adds space between the image and the text */
+  width: 220px; /* Adjust as necessary */
+  height: auto;
+  border-radius: 10px; /* Optional, for rounded corners */
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+section {
+  clear: both;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adjust the gap between images as needed */
+}
+
+.gallery figure {
+  margin: 0; /* Remove any default margins */
+  padding: 0px; /* Add this */
+  position: center; /* Add this */
+}
+
+/* Style for the images within the figure */
+.gallery img {
+  width: 200px;
+  height: 200px; /* Maintain aspect ratio */
+  border-radius: 7px;
+}
+
+.gallery figcaption {
+  font-size: 14px;
+  /* Remove absolute positioning and let the caption flow in document order */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for legibility */
+  padding: 5px;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+}
+
+/* General form styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Specific input types could have different border colors */
+form input[type="date"] {
+  border-color: #6dd5ed;
+}
+
+form input[type="color"] {
+  border-color: #2193b0;
+}
+
+form button {
+  background-color: #6dd5ed;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+form button:hover {
+  background-color: #57c1d4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
     padding: 15px;
-    margin: 10px;
   }
-  
-  aside {
-    float: left;
-    width: 33.3%;
-    padding: 15px;
-    margin: 10px;
-  }
-  
-  main::after, aside::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .mainimg {
-    border: 2px solid rgb(0, 0, 0);
-  }
-  
-  figcaption {
-    font-weight: bold;
-    font-variant: small-caps;
-  }
-  
-  q {
-    font-family: cursive;
-    font-style: italic;
-    font-size: 18px;
-  }
-  
-  ul li {
-    list-style: none;
-    line-height: 1.5;
-  }
-  
-  ul > a {
-    text-decoration: none;
-    color: rgb(3, 3, 3);
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
+}
+
+/* Large screens (over 1200px) */
+@media (min-width: 1201px) {
+  html {
+    font-size: 110%; /* 17.6px */
   }
 
-  aside a:hover {
-    color: rgb(19, 175, 71);
+  .header, .footer {
+    padding: 3rem; /* 48px */
   }
-  
+
+  /* Specify a different background image for the aside */
+  .aside-background {
+    background-image: url('../images/image3.jpg');
+  }
+}
+/* Small screens (under 768px) */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%; /* 14.4px */
+  }
+
+  body {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .header h1 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+
+  .footer, .header {
+    padding: 1rem; /* 16px */
+  }
+
+  /* Specify a different background image for the aside */
+  .aside-background {
+    background-image: url('../images/flag.jpeg');
+  }
+}
+html {
+  font-size: 16px; /* This sets the default font size for the document */
+}
